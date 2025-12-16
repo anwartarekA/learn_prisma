@@ -2,9 +2,10 @@ POST http://localhost:4000/ HTTP/1.1
 Content-Type: application/json
 
 {
-    "firstName":"test",
-    "lastName":"teststt",
-    "age":11
+    "firstName":"anwar",
+    "lastName":"tarek",
+    "age":24,
+    "email":"anwar@gmail.com"
 }
 #####
 GET  http://localhost:4000/ HTTP/1.1
@@ -17,3 +18,30 @@ Content-Type: application/json
 }
 #####
 DELETE http://localhost:4000/6 HTTP/1.1
+
+####
+POST http://localhost:4000/post HTTP/1.1
+Content-Type: application/json
+
+{
+    "title":"post tarek",
+    "user_id":1
+}
+####
+POST  http://localhost:4000/post/many HTTP/1.1
+Content-Type: application/json
+
+[
+    {
+        "title":"test 3",
+        "user_id":2,
+        "active":true,
+        "content":null
+    },
+    {
+        "title":"test 4",
+        "user_id":1,
+        "active":true,
+        "content":null
+    }
+]
