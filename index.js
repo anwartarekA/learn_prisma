@@ -23,7 +23,7 @@ app.get('/', async (req, res) => {
     });
     res.status(200).json(users)
 })
-// update user
+// update a user
 app.patch('/:id', async (req, res) => {
     const { age } = req.body;
     const { id } = req.params;
